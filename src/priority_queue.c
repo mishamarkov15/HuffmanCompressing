@@ -50,10 +50,10 @@ void heapify(priority_queue *q, int64_t i) {
         int64_t largest = i;
         int64_t l = 2 * i + 1;
         int64_t r = 2 * i + 2;
-        if (l < q->size && q->data[l]->frequency > q->data[largest]->frequency) {
+        if (l < q->size && q->data[l]->frequency < q->data[largest]->frequency) {
             largest = l;
         }
-        if (r < q->size && q->data[r]->frequency > q->data[largest]->frequency) {
+        if (r < q->size && q->data[r]->frequency < q->data[largest]->frequency) {
             largest = r;
         }
 

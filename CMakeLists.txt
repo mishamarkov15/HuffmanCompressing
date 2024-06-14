@@ -10,4 +10,10 @@ set(SOURCES
         src/node.c
         src/binary_tree.c)
 
-add_executable(AliCompressor ${SOURCES})
+set(HEADERS
+        headers/priority_queue.h
+        headers/huffman_compressing.h
+        headers/node.h
+        headers/binary_tree.h)
+
+add_executable(AliCompressor ${SOURCES} ${HEADERS})
