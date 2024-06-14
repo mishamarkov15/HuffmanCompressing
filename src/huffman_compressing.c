@@ -82,7 +82,7 @@ void buildHuffmanTree(const char *string) {
 
     node *root = pq->data[0];
 
-    char **huffmanCode = (char **) (malloc(sizeof(char *) * alphabet_size));
+    char **huffmanCode = (char **) (calloc(alphabet_size + 1, sizeof(char *)));
     encode(root, "", huffmanCode);
 
     printf("Huffman Codes are:\n");
