@@ -46,7 +46,7 @@ void decode(node *root, int *index, const char *str) {
 void buildHuffmanTree(const char *string) {
     // Count frequency of characters: index - code of symbol, value - frequency of this symbol
     const int alphabet_size = (1 << (sizeof(char) * 8)); // 1 << sizeof(char) * 8 <=> 1 << 8 <=> pow(2, 8)
-    uint64_t* frequency = (uint64_t*)(malloc(alphabet_size));
+    uint64_t* frequency = (uint64_t*)(calloc(alphabet_size, sizeof (uint64_t)));
     for (uint64_t i = 0; i < strlen(string); ++i) {
         ++frequency[(int) (string[i])];
     }
